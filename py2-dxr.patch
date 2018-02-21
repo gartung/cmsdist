@@ -1,14 +1,13 @@
-diff --git a/dxr/plugins/clang/indexer.py b/dxr/plugins/clang/indexer.py
-index a095d2a..bf101ab 100644
---- a/dxr/plugins/clang/indexer.py
-+++ b/dxr/plugins/clang/indexer.py
-@@ -5,7 +5,7 @@ import dxr.schema
- import os, sys
- import re, urllib
- from dxr.languages import language_schema
--
+diff --git a/dxr/plugins/clang/condense.py b/dxr/plugins/clang/condense.py
+index 96a354f..103f791 100755
+--- a/dxr/plugins/clang/condense.py
++++ b/dxr/plugins/clang/condense.py
+@@ -6,6 +6,7 @@ reason to keep this IR.]
+ 
+ """
+ import csv
 +csv.field_size_limit(sys.maxsize)
-
- PLUGIN_NAME   = 'clang'
-
+ from functools import partial
+ from itertools import chain, izip
+ from os.path import join
 

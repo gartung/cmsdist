@@ -4,6 +4,7 @@ Source: none
 
 Requires: root curl python
 
+BuildRequires: py2-dxr
 BuildRequires: py2-configparser 
 BuildRequires: py2-entrypoints
 BuildRequires: py2-psutil
@@ -94,6 +95,7 @@ BuildRequires: py2-pytest
 BuildRequires: py2-avro
 BuildRequires: py2-fs
 BuildRequires: py2-lizard
+BuildRequires: py2-dxr
 
 %prep
 

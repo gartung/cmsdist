@@ -1,5 +1,5 @@
 ### RPM external py2-dxr-toolfile 1.0
-Requires: py2-dxr  py2-pippkgs py2-pysqlite
+Requires: py2-dxr
 %prep
 
 %build
@@ -13,13 +13,12 @@ cat << \EOF_TOOLFILE >%{i}/etc/scram.d/py2-dxr.xml
   <client>
     <environment name="PY2_DXR_BASE" default="@TOOL_ROOT@"/>
     <environment name="LIBDIR" default="$PY2_DXR_BASE/lib"/>
+    <environment name="PYTHONUSERBASE" default="$PY2_DXR_BASE"/>
   </client>
     <runtime name="PYTHONPATH" value="$PY2_DXR_BASE/lib/python@PYTHONV@/site-packages" type="path"/>
     <runtime name="PATH" value="$PY2_DXR_BASE/bin" type="path"/>
+    <runtime name="PYTHONUSERBASE" value="$PY2_DXR_BASE" type="path"/>
     <use name="python"/>
-    <use name="sqlite"/>
-    <use name="py2-pysqlite"/>
-    <use name="py2-pippkgs"/>
 </tool>
 EOF_TOOLFILE
 
