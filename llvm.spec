@@ -5,8 +5,10 @@
 
 BuildRequires: python cmake ninja
 Requires: gcc zlib
+%ifos linux
 %if %{isamd64}
 Requires: cuda
+%endif
 %endif
 AutoReq: no
 
